@@ -82,7 +82,10 @@ else:
     removePunctuation = False
 
 
+
+
 tokenCount, sortedTokens = normalizeText(lowerCase=lowercaseText, removeStopWords=removeStopWords, stemming=stemming, removePunctuation=removePunctuation)
+print(tokenCount)
 # Output just top 10 most common words, code provided by ChatGPT.
 print("\nMost common 10 words:")
 for word, count in islice(sortedTokens.items(), 10):
