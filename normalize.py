@@ -83,10 +83,15 @@ else:
 
 
 tokenCount, sortedTokens = normalizeText(lowerCase=lowercaseText, removeStopWords=removeStopWords, stemming=stemming, removePunctuation=removePunctuation)
-# Output just top 5 most common words, code provided by ChatGPT.
-for word, count in islice(sortedTokens.items(), 5):
+# Output just top 10 most common words, code provided by ChatGPT.
+print("\nMost common 10 words:")
+for word, count in islice(sortedTokens.items(), 10):
     print(f"{word}: {count}")
-print("TokenCount ", tokenCount)
+
+# Output last 10 words
+print("\nLeast common 10 words:")
+for word, count in islice(sortedTokens.items(), len(sortedTokens)-10, len(sortedTokens)):
+    print(f"{word}: {count}")
 
 
 # Plot here.
