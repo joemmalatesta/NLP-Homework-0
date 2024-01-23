@@ -26,7 +26,7 @@ I combined all of my normalization into one function, with each being toggled by
 - stemming
 
   
-I chose to remove punctuation because it helped remove some repeats in the high and low count words. Being able to run it with and without removing it helped me understand common words that end sentences or 
+I chose to remove punctuation because it helped remove some repeats in the high and low count words. Being able to run it with and without removing it helped me understand common words that end sentences or quotations.
 
 ### Sample output
 This is made with lowercasing and removal of punctuation but no stemming or stop word removal.
@@ -65,7 +65,7 @@ newsletter: 1
 #### Zipf's Law
 - My results are slightly differing from Zipf's law (after lowercasing and removing punctuation). While I expected the numbers of the law to differ which they do (4343,3025,2766,2760), I did expect the most common words to be the same. There is one difference in my top four words though which is "I". This was an interesting finding because I wrote beforehand that there may be more possessive writing due to there being letters included in the text.
 #### Removing stop words
-- After removing stop words, the token count drops from 78k to 32k. This means that there are more stop words in the text than regular content. While I did use a larger corpus of stopwords than the one provided by `nltk`, it is still substantial and strange to think about actually.
+- After removing stop words, the token count drops from 78k to 32k. This means that there are more stop words in the text than regular content. While I did use a larger corpus of stopwords than the one provided by `nltk`, it is still substantial and strange to think about actually. Given Zipf's law, the drop off of commonly used words is far less from the first to second due to the fact that the most commonly used words are already removed. This means that the most common word with stopwords removed would be the (1st freq with stopwords/1st freq without stopwords).
 
 ### What I learned
 In completing this assignment, I used many libraries that I had previous experience with for formatting and outputting data, but I got more experience with what went into normalizing tokens as well as the `nltk` library. It was interesting to see how much you could remove and still retain most of the message. In addition, it was cool to see the math and thought behind it with Zipf's law. Overall, it was a good introduction to the basis of which NLP is built.
